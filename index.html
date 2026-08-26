@@ -4,8 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#071525">
-
-  <title>Pastor Herminio C. Leal</title>
+  <title>Pastor Herminio C. Leal | Rios de Agua Viva</title>
 
   <style>
     * {
@@ -39,6 +38,21 @@
       object-fit: contain;
     }
 
+    .church {
+      margin: 5px 0 2px;
+      font-size: 25px;
+      letter-spacing: 1.4px;
+      font-family: Georgia, "Times New Roman", serif;
+      text-shadow: 0 2px 12px rgba(0,0,0,.7);
+    }
+
+    .sub {
+      font-size: 12px;
+      letter-spacing: 3px;
+      color: #d9e3ee;
+      margin-bottom: 25px;
+    }
+
     .photo-wrap {
       width: 190px;
       height: 190px;
@@ -65,26 +79,19 @@
       margin: 5px 0;
     }
 
+    .title {
+      color: #b9c8d8;
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
     .address {
       color: #d7e0e9;
       font-size: 14px;
       line-height: 1.5;
       margin: 0 auto 25px;
     }
-.schedule-box {
-  display: none;
-  width: 100%;
-  margin-top: 2px;
-  margin-bottom: 4px;
-}
 
-.schedule {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 14px;
-  box-shadow: 0 10px 30px rgba(0,0,0,.35);
-}
     .buttons {
       display: grid;
       gap: 12px;
@@ -107,7 +114,6 @@
       box-shadow: 0 8px 22px rgba(0,0,0,.28);
       cursor: pointer;
       transition: transform .15s ease, background .15s ease;
-      font-family: Arial, Helvetica, sans-serif;
     }
 
     .btn:active {
@@ -124,25 +130,21 @@
       font-size: 21px;
     }
 
-    .schedule-box {
-      display: none;
-      width: 100%;
-      margin-top: 2px;
-      margin-bottom: 4px;
-    }
-
-    .schedule {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 14px;
-      box-shadow: 0 10px 30px rgba(0,0,0,.35);
+    .footer {
+      margin-top: 27px;
+      color: #8495a6;
+      font-size: 11px;
+      letter-spacing: .6px;
     }
 
     @media (max-width: 390px) {
       .photo-wrap {
         width: 170px;
         height: 170px;
+      }
+
+      .church {
+        font-size: 22px;
       }
 
       .name {
@@ -156,115 +158,64 @@
 
   <main class="card">
 
-    <!-- LOGO -->
-    <img
-      class="logo"
-      src="logo.png"
-      alt="Rios de Agua Viva Apostolic Church"
-    >
+    <img class="logo" src="logo.png" alt="Rios de Agua Viva Apostolic Church">
 
-    <!-- FOTO DEL PASTOR -->
+    <h1 class="church">RIOS DE AGUA VIVA</h1>
+    <div class="sub">APOSTOLIC CHURCH</div>
+
     <div class="photo-wrap">
-      <img
-        class="photo"
-        src="pastor.jpg"
-        alt="Pastor Herminio C. Leal"
-      >
+      <img class="photo" src="pastor.jpg" alt="Pastor Herminio C. Leal">
     </div>
 
-    <!-- NOMBRE -->
-    <h2 class="name">
-      Pastor Herminio C. Leal
-    </h2>
+    <h2 class="name">Pastor Herminio C. Leal</h2>
+    <div class="title">Pastor</div>
 
-    <!-- DIRECCIÓN -->
     <div class="address">
       4000 Victory Dr.<br>
       Kansas City, KS 66102
     </div>
 
-    <!-- BOTONES -->
     <div class="buttons">
 
-      <!-- LLAMAR -->
-      <a
-        class="btn btn-primary"
-        href="tel:+18163090938"
-      >
+      <a class="btn btn-primary" href="tel:+18163090938">
         <span class="icon">☎</span>
         Call Pastor Herminio
       </a>
 
-      <!-- AGREGAR CONTACTO -->
-      <button
-        class="btn"
-        type="button"
-        onclick="addContact()"
-      >
+      <button class="btn" onclick="addContact()">
         <span class="icon">👤</span>
         Agregar a Contactos
       </button>
 
-      <!-- HORARIO -->
-      <button
-        class="btn"
-        type="button"
-        onclick="toggleSchedule()"
-      >
-        <span class="icon">📅</span>
-        Horario de Servicios
-      </button>
+      <a class="btn"
+   href="https://www.facebook.com/share/1EShZ44Z7V/?mibextid=wwXIfr"
+   target="_blank"
+   rel="noopener noreferrer">
+    <span class="icon">f</span>
+    Facebook
+</a>
 
-      <!-- IMAGEN DEL HORARIO -->
-      <div id="scheduleBox" class="schedule-box">
-        <img
-          class="schedule"
-          src="horario.jpeg"
-          alt="Horario de Servicios"
-        >
-      </div>
+<a class="btn"
+   href="https://venmo.com/u/RiosDeAguaViva-ApostolicChurch"
+   target="_blank"
+   rel="noopener noreferrer">
+    <span class="icon">💝</span>
+    Donaciones
+</a>
 
-      <!-- FACEBOOK -->
-      <a
-        class="btn"
-        href="https://www.facebook.com/share/1EShZ44Z7V/?mibextid=wwXIfr"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <span class="icon">f</span>
-        Facebook
-      </a>
-
-      <!-- DONACIONES -->
-      <a
-        class="btn"
-        href="https://venmo.com/u/RiosDeAguaViva-ApostolicChurch"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <span class="icon">💝</span>
-        Donaciones
-      </a>
-
-      <!-- CONTRIBUCIONES -->
-      <a
-        class="btn"
-        href="https://venmo.com/u/RiosDeAguaViva-ApostolicChurch"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <span class="icon">🙏</span>
-        Contribuciones
-      </a>
-
-      <!-- CÓMO LLEGAR -->
-      <a
-        class="btn"
-        href="https://www.google.com/maps/search/?api=1&query=4000+Victory+Dr+Kansas+City+KS+66102"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+<a class="btn"
+   href="https://venmo.com/u/RiosDeAguaViva-ApostolicChurch"
+   target="_blank"
+   rel="noopener noreferrer">
+    <span class="icon">🙏</span>
+    Contribuciones
+</a>
+      <a class="btn"
+         href="https://www.google.com/maps/search/?api=1&query=4000+Victory+Dr+Kansas+City+KS+66102"
+         target="_blank"
+         rel="noopener noreferrer">
         <span class="icon">📍</span>
+     
         Cómo Llegar
       </a>
 
@@ -273,32 +224,20 @@
   </main>
 
   <script>
-    function toggleSchedule() {
-      const scheduleBox = document.getElementById("scheduleBox");
-
-      if (scheduleBox.style.display === "block") {
-        scheduleBox.style.display = "none";
-      } else {
-        scheduleBox.style.display = "block";
-      }
-    }
-
     function addContact() {
       const vcard =
 `BEGIN:VCARD
 VERSION:3.0
-N:Leal;Herminio C.;
+N:Leal;Herminio C.;;Pastor;
 FN:Pastor Herminio C. Leal
+ORG:Iglesia Apostólica Rios de Agua Viva
+TITLE:Pastor
 TEL;TYPE=CELL:+18163090938
 ADR;TYPE=WORK:;;4000 Victory Dr.;Kansas City;KS;66102;USA
 URL:https://www.facebook.com/share/1EShZ44Z7V/?mibextid=wwXIfr
 END:VCARD`;
 
-      const blob = new Blob(
-        [vcard],
-        { type: "text/vcard;charset=utf-8" }
-      );
-
+      const blob = new Blob([vcard], { type: "text/vcard;charset=utf-8" });
       const url = URL.createObjectURL(blob);
 
       const link = document.createElement("a");
@@ -309,9 +248,7 @@ END:VCARD`;
       link.click();
       document.body.removeChild(link);
 
-      setTimeout(() => {
-        URL.revokeObjectURL(url);
-      }, 1000);
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
     }
   </script>
 
